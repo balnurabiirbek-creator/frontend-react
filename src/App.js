@@ -16,6 +16,7 @@ function App() {
             Изучите компонент Counter — как работает useState и обработка событий.
           </p>
           <Counter />
+          <Counter />
         </section>
 
         <section className="app__section">
