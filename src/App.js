@@ -1,32 +1,23 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import Counter from './components/Counter/Counter';
-import UserList from './components/UserList/UserList';
 
 function App() {
   return (
-    <div className="app">
-      <Header title="React Практика" />
+    <div>
+      <h1>Balnur Abirbek</h1>
 
-      <main className="app__main">
-        <section className="app__section">
-          <h2>Задание 1: Счётчик</h2>
-          <p className="app__description">
-            Изучите компонент Counter — как работает useState и обработка событий.
-          </p>
-          <Counter />
-          <Counter />
-        </section>
+      <p>
+        Я решила изучать фронтенд, потому что мне нравится создавать
+        современные сайты, работать над дизайном интерфейсов и изучать
+        новые технологии.
+      </p>
 
-        <section className="app__section">
-          <h2>Задание 2: Список пользователей</h2>
-          <p className="app__description">
-            Изучите компонент UserList — как работает useEffect и загрузка данных.
-          </p>
-          <UserList />
-        </section>
-      </main>
+      <ul>
+        <li>UI/UX дизайн</li>
+        <li>Веб-разработка</li>
+        <li>Мобильный дизайн</li>
+        <li>Стартапы и технологии</li>
+      </ul>
     </div>
   );
 }

@@ -1,33 +1,86 @@
 .btn {
-  padding: 8px 20px;
-  border: none;
-  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 92px;
+  min-height: 46px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  transition: opacity 0.2s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    filter 0.2s ease;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
 }
 
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
 
 .btn:hover:not(:disabled) {
-  opacity: 0.85;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+  filter: brightness(1.02);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 3px;
 }
 
 .btn--primary {
-  background-color: #0070f3;
   color: #fff;
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
 }
 
 .btn--secondary {
-  background-color: #e5e7eb;
-  color: #333;
+  color: #0f4c81;
+  background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+  border-color: #bfdbfe;
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #e0f2fe 0%, #c7ddff 100%);
+  border-color: #93c5fd;
 }
 
 .btn--danger {
-  background-color: #ef4444;
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
   color: #fff;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.btn--danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ea580c 0%, #b91c1c 100%);
+}
+
+@media (max-width: 520px) {
+  .counter__controls .btn {
+    width: 100%;
+  }
 }
